@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import astronautImage from "~/assets/astronaut.png";
+import kedatechLogo from "~/assets/kedatech-ligth.svg";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import GitHubCorner from "./github-corner.astro";
@@ -20,13 +20,13 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     <h2
       class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Icon name="logomark" class="size-20 text-white md:size-32" />
+      <!-- <Icon name="kedatech" class="size-20 text-white md:size-32" /> -->
       <div
         class="gradient-text text-center font-extrabold tracking-tighter text-6xl md:text-8xl"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        Construye
+        <br /> el futuro,
+        <br /> con nosotros.
       </div>
     </h2>
     <div
@@ -35,7 +35,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     >
       <Image
         class="h-full w-full object-cover"
-        src={astronautImage}
+        src={kedatechLogo}
         widths={widths}
         sizes={sizes}
         loading="eager"

@@ -1,66 +1,70 @@
 ---
-import { Icon } from "astro-icon/components";
-import ContentSection from "~/components/content-section.astro";
-import type { FeatureItem } from "~/types";
+import { Icon } from "astro-icon/components"
+import ContentSection from "~/components/content-section.astro"
+import type { FeatureItem } from "~/types"
 
 const features: Array<FeatureItem> = [
-  {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "mdi:handshake",
-  },
-  {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "mdi:feather",
-  },
-  {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
-    icon: "mdi:directions-fork",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
-    icon: "mdi:graph",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.",
-    icon: "mdi:search-web",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "mdi:account-group",
-  },
-];
+	{
+		title: "Flexibilidad para usar tu propio stack",
+		description:
+			"En Kedatech, puedes desarrollar utilizando las tecnologías que prefieras, ya sea React, Angular, Vue, o cualquier otro stack de tu elección.",
+		icon: "mdi:handshake",
+	},
+	{
+		title: "Soluciones optimizadas y ligeras",
+		description:
+			"Ofrecemos productos que son altamente optimizados para rendimiento, utilizando el mínimo de recursos posibles y garantizando una experiencia fluida.",
+		icon: "mdi:feather",
+	},
+	{
+		title: "Componentes escalables y personalizados",
+		description:
+			"Nuestros sistemas permiten añadir y escalar funcionalidades a medida que las necesidades de tu negocio crecen, con total personalización según tu visión.",
+		icon: "mdi:directions-fork",
+	},
+	{
+		title: "Integración amplia",
+		description:
+			"Kedatech facilita la integración con diferentes servicios y herramientas del mercado como APIs, plataformas cloud, y módulos de terceros.",
+		icon: "mdi:graph",
+	},
+	{
+		title: "Optimización para SEO",
+		description:
+			"Automatizamos la creación de sitemaps, feeds RSS, y otras herramientas para optimizar la visibilidad y el posicionamiento de tus soluciones en motores de búsqueda.",
+		icon: "mdi:search-web",
+	},
+	{
+		title: "Comunidad colaborativa",
+		description:
+			"Kedatech es una startup que crece gracias al apoyo de una comunidad global de profesionales apasionados, contribuyendo al desarrollo y mejora continua.",
+		icon: "mdi:account-group",
+	},
+]
 ---
 
-<ContentSection title="Features" id="features">
-  <Fragment slot="lead">
-    Astro comes <span class="text-primary">batteries included</span>. It takes
-    the best parts of
-    <span class="text-primary">state-of-the-art</span>
-    tools and adds its own <span class="text-primary">innovations</span>.
-  </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {
-      features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-          <div class="size-16 rounded-full border-2 border-current p-3">
-            <Icon name={icon} class="size-full" />
-          </div>
-          <p class="text-center font-extrabold text-xl">{title}</p>
-          <p class="text-center text-offset text-sm">{description}</p>
-        </li>
-      ))
-    }
-  </ul>
+<ContentSection
+	title="Features"
+	id="features"
+>
+<Fragment slot="lead">
+    Soluciones <span class="text-primary"> tecnológicas innovadoras</span> y adaptables, para impulsar tu negocio.
+</Fragment>
+
+	<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+		{
+			features.map(({ title, description, icon }) => (
+				<li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+					<div class="size-16 rounded-full border-2 border-current p-3">
+						<Icon
+							name={icon}
+							class="size-full"
+						/>
+					</div>
+					<p class="text-center font-extrabold text-xl">{title}</p>
+					<p class="text-center text-offset text-sm">{description}</p>
+				</li>
+			))
+		}
+	</ul>
 </ContentSection>
